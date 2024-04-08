@@ -259,7 +259,7 @@ size_t TinySoftwareSerial::write(uint8_t ch) {
     //                                   // We can't use r0 for this, because uartDelay uses r0 as it's delay counter.
     "cli"                         "\n\t" // disable interrupts if they're not disabled already.
     "ldi r20, 10"                 "\n\t" //
-    "in r19, %[uartPort]"         "\n\t" // load the curret value of the TX PORT register.
+    "in r19, %[uartPort]"         "\n\t" // load the current value of the TX PORT register.
     "or r19, %[txmask]"           "\n\t" // there's our pattern for a 1. one hopes that this line is unnecessary since serial is IDLE HIGH.
     "mov r18,r19"                 "\n\t" // copy it to the zero bit...
     "eor r18, %[txmask]"          "\n\t" // xor with the txmask, which has all but 1 bit set, a bit which we know is set in the destination register. 4 instructions to prepare the 0 and 1 bit patterns.

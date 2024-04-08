@@ -212,7 +212,7 @@
 /*      There are already enough unholy things done to this*/
 /*      version that it shouldn't compile for any ATmega  */
 /*      so why imply that it would?                       */
-/*      Adust most indentation to match all of my cores   */
+/*      Adjust most indentation to match all of my cores  */
 /* 58.0 Pull in RS485 support by Vladimir Dronnikov       */
 /*      ( github.com/dvv ) as used in                     */
 /*      github.com/SodaqMoja/optiboot                     */

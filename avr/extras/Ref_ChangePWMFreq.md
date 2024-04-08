@@ -24,7 +24,7 @@ In a timer counter unit, when we're talking about PWM, we're talking about the s
 * When full control of the timer is taken the additional functionality might include (briefly - these features are beyond the scope of this document):
   * Periodic interrupts with CTC (Clear Timer on Compare match)
   * Arbitrary TOP values, sometimes without the loss of an output, other times only at the cost of an output channel.
-    * 16-bit timers which have an input capture feature (I belive all of the classic AVR "standard" timer1s plus higher timers that are a copy of the standard timer1) have a PWM mode where you set the ICR register to the TOP value without losing either of the output compares.
+    * 16-bit timers which have an input capture feature (I believe all of the classic AVR "standard" timer1s plus higher timers that are a copy of the standard timer1) have a PWM mode where you set the ICR register to the TOP value without losing either of the output compares.
     * On 8-bit timers, typically the only option is to set it so output compare channel A sets top, losing a channel.
   * Higher resolution on Timer1, except:
     * On the 43 - it's 8-bit there, copy of timer0.
@@ -85,7 +85,7 @@ The high speed timers have a few bits of odd behavior to them, the most relevant
 
 When either of these timers used to generate PWM, which is what they're made for, OCR1C is TOP (though this defaults to 255), while OCR1A, B, and D if present are the output channels.
 
-For the Tiny x5, you again have two swiches available that impact the frequency. The Tx61 does as well, but also lets you choose one of the whopping 4 WGMs available; all of these can be done without losing analogWrite(). Either way, the prescaler is 4 bits now (0 = stopped, otherwise, the prescaler is 2^(n-1))
+For the Tiny x5, you again have two switches available that impact the frequency. The Tx61 does as well, but also lets you choose one of the whopping 4 WGMs available; all of these can be done without losing analogWrite(). Either way, the prescaler is 4 bits now (0 = stopped, otherwise, the prescaler is 2^(n-1))
 
 The bits are located in TCCR1 on the tiny85:
 ```c
