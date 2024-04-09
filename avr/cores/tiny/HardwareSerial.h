@@ -73,7 +73,7 @@
   #endif
   /* WARNING
    * BUFFER SIZES MUST BE POWERS OF TWO - The compiler misses some of the
-   * optimization possible with the % opperator. only a small portion of it, but as there's no compelling reason NOT
+   * optimization possible with the % operator. only a small portion of it, but as there's no compelling reason NOT
    * to use a power of two size, and there are some extrenely flash-constrained parts that have a USART (I'm thinking of the 2313 in particular
    * I couldn't justify not explicitly optimizing the % SERIAL_BUFFER_SIZE to a & (SERIAL_BUFFER_SIZE -1))
    */

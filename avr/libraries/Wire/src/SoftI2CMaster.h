@@ -435,7 +435,7 @@ bool i2c_write(uint8_t value) {
      " nop \n\t "
      " sbi  %[SCLDDR],%[SCLPIN] ; force SCL low so SCL = H is short\n\t"
      " ret \n\t"
-     "              ; + 4 = 17C + 2X for acknowldge bit"
+     "              ; + 4 = 17C + 2X for acknowledge bit"
      ::
       [SCLDDR] "I"  (SCL_DDR), [SCLPIN] "I" (SCL_PIN), [SCLIN] "I" (SCL_IN),
       [SDADDR] "I"  (SDA_DDR), [SDAPIN] "I" (SDA_PIN), [SDAIN] "I" (SDA_IN));

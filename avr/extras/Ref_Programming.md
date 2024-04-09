@@ -16,7 +16,7 @@ Ensure that you have connected all necessary external components (see [Wiring Gu
 * SCK of programmer (pin 13 on Uno/Nano/ProMini) to SCK of target
 * MISO of programmer (pin 12 on Uno/Nano/ProMini) to MISO of target
 * MOSI of programmer (pin 11 on Uno/Nano/ProMini) to MOSI of target
-* Pin 10 (pin 10 on Uno/Nano/ProMini, or pin "RST" pin on the ISP connector of a dedicated programer) to RST of target
+* Pin 10 (pin 10 on Uno/Nano/ProMini, or pin "RST" pin on the ISP connector of a dedicated programmer) to RST of target
 
 You must have a supported programmer:
 * AVR ISP

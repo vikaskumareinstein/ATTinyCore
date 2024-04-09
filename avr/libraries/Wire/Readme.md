@@ -51,7 +51,7 @@ When the master *writes* to the slave:
 3. Slave ACKs
 4. Master clocks out 8 databytes
 5. Slave stores in buffer and ACKs
-6. repeat 4-5 until master is done sending or slave's buffer is full causeing it to NACK.
+6. repeat 4-5 until master is done sending or slave's buffer is full causing it to NACK.
 7. Master generates a stop condition.
 8. Slave's onReceive handler is called, being passed the number of bytes received.
 
